@@ -1,66 +1,58 @@
-# YanisManager
+===================================================
+YANISMANAGER - TP CPP 
+===================================================
 
-## Présentation
+Présentation :
+---------------
+YanisManager est une application console en C++ pour gérer des étudiants et leurs notes.
+Chaque utilisateur possède un rôle spécifique : ADMIN, PROF, STUDENT.
 
-YanisManager est un projet C++ permettant de gérer des étudiants et leurs notes.
-Chaque utilisateur possède un rôle : ADMIN, PROF ou STUDENT.
-
-Fonctionnalités :
-
-- ADMIN : voir, ajouter et supprimer des étudiants, ainsi que consulter leurs emails.
-- PROF : voir, ajouter, modifier et supprimer des notes.
+Fonctionnalités par rôle :
+- ADMIN : voir, ajouter, supprimer des étudiants (affichage des emails optionnel).
+- PROF : voir, ajouter, modifier, supprimer des notes.
 - STUDENT : voir uniquement ses propres notes.
 
----
+Utilisateurs par défaut :
+---------------------------
+| Rôle     | ID  | Username | Password |
+|----------|-----|----------|----------|
+| ADMIN    | -   | admin    | 1234     |
+| PROF     | -   | prof     | abcd     |
+| STUDENT  | 1   | yanis    | pass     |
+| STUDENT  | 2   | apon     | pass2    |
 
-## Utilisateurs par défaut
+Installation et lancement :
+-----------------------------
+1. Cloner le dépôt GitHub :
+   git clone https://github.com/yanishimidi/projet_yanis_cpp.git
 
-ADMIN
-username : admin
-password : 1234
+2. Entrer dans le dossier du projet :
+   cd projet_yanis_cpp/StudentManager
 
-PROF
-username : prof
-password : abcd
+3. Compiler avec C++17 :
+   g++ -std=c++17 main.cpp AuthService.cpp ExportService.cpp -o YanisManager
+   (Si vous ne précisez pas -o YanisManager, l'exécutable s'appellera a.out)
 
-STUDENT
-username : yanis
-password : pass
+4. Lancer le programme :
+   ./YanisManager
+   ou ./a.out si vous avez compilé sans nom de sortie.
 
-STUDENT
-username : apon
-password : pass2
+Utilisation :
+--------------
+- Lancez le programme, connectez-vous avec un des comptes.
+- Suivez les menus proposés selon votre rôle.
+- Pour revenir à l'écran de connexion, choisissez l'option 0 (quitter) dans le menu principal.
 
----
+Structure du projet (dossier StudentManager) :
+-----------------------------------------------
+- main.cpp                : point d'entrée
+- AuthService.cpp/.h      : gestion de l'authentification
+- ExportService.cpp/.h    : export des données
+- Student.h, Course.h, Note.h, User.h : modèles
+- README.md               : ce fichier (en version markdown)
+- export.txt              : exemple de fichier généré
 
-## Installation et lancement
 
-1) Cloner le projet :
+- Assurez-vous d'avoir g++ installé et compatible C++17.
 
-git clone https://github.com/yanishimidi/projet_yanis_cpp
-cd YanisManager
-
-2) Compiler :
-
-g++ -std=c++17 main.cpp AuthService.cpp ExportService.cpp -o YanisManager
-
-3) Lancer le programme :
-
-./YanisManager
-
----
-
-## Utilisation
-
-- Se connecter avec un des comptes ci-dessus.
-- Utiliser le menu correspondant au rôle.
-- Pour revenir à l’écran de connexion, choisir l’option 0. Quitter.
-- Le programme reste actif après déconnexion.
-
----
-
-## Informations complémentaires
-
-- Les notes sont directement associées aux étudiants.
-- Les données sont stockées en mémoire.
-- Aucune base de données n’est utilisée.
+Bon courage avec YanisManager !

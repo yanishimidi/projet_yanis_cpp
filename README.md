@@ -24,18 +24,21 @@ Utilisateurs par défaut :
 Installation et lancement :
 -----------------------------
 1. Cloner le dépôt GitHub :
-   git clone https://github.com/yanishimidi/projet_yanis_cpp.git
 
-2. Entrer dans le dossier du projet :
+    git clone https://github.com/yanishimidi/projet_yanis_cpp.git
+
+3. Entrer dans le dossier du projet :
+
    cd projet_yanis_cpp/StudentManager
 
-3. Compiler avec C++17 :
-   g++ -std=c++17 main.cpp AuthService.cpp ExportService.cpp -o YanisManager
-   (Si vous ne précisez pas -o YanisManager, l'exécutable s'appellera a.out)
+5. Compiler avec C++17 :
 
-4. Lancer le programme :
+   g++ -std=c++17 main.cpp AuthService.cpp ExportService.cpp -o YanisManager
+   
+7. Lancer le programme :
+
    ./YanisManager
-   ou ./a.out si vous avez compilé sans nom de sortie.
+   
 
 Utilisation :
 --------------
